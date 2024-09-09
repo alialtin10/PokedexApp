@@ -7,12 +7,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          AppTitle(),
-          Expanded(child: PokemonList()),
-        ],
+    return Scaffold(
+      body: OrientationBuilder(
+        builder: (context, orientation) => Column(
+          children: [
+            AppTitle(),
+            Expanded(child: PokemonList()),
+          ],
+        ),
       ),
     );
   }
