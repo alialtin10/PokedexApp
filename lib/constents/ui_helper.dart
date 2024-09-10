@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class UIHelper{
+class UIHelper {
   UIHelper._();
 
-  static double getAppTitleWidgetHeight(){
+  static double getAppTitleWidgetHeight() {
     return ScreenUtil().orientation == Orientation.portrait ? 0.15.sh : 0.15.sw;
   }
 
-  static EdgeInsets getdefaultPadding(){
-    if(ScreenUtil().orientation == Orientation.portrait){
+  static EdgeInsets getdefaultPadding() {
+    if (ScreenUtil().orientation == Orientation.portrait) {
       return EdgeInsets.all(12.h);
-    }else{
+    } else {
       return EdgeInsets.all(8.w);
     }
   }
+
   static final Map<String, Color> _typeColorMap = {
     'Grass': Colors.green,
     'Fire': Colors.redAccent,
@@ -46,7 +47,7 @@ class UIHelper{
     }
   }
 
-  static double calculatePokeImageAndBallSize(){
+  static double calculatePokeImageAndBallSize() {
     return ScreenUtil().orientation == Orientation.portrait ? 0.2.sw : 0.25.sh;
   }
 }
