@@ -15,4 +15,38 @@ class UIHelper{
       return EdgeInsets.all(8.w);
     }
   }
+  static final Map<String, Color> _typeColorMap = {
+    'Grass': Colors.green,
+    'Fire': Colors.redAccent,
+    'Water': Colors.blue,
+    'Electric': Colors.yellow,
+    'Rock': Colors.grey,
+    'Ground': Colors.brown,
+    'Bug': Colors.lightGreenAccent.shade700,
+    'Psychic': Colors.indigo,
+    'Fighting': Colors.orange,
+    'Ghost': Colors.deepPurple,
+    'Normal': Colors.black26,
+    'Poison': Colors.deepPurpleAccent
+  };
+
+  static Color getColorFromType(String type) {
+    if (_typeColorMap.containsKey(type)) {
+      return _typeColorMap[type] ?? Colors.pink.shade300;
+    } else {
+      return Colors.pink.shade300;
+    }
+  }
+
+  static EdgeInsets getIconPadding() {
+    if (ScreenUtil().orientation == Orientation.portrait) {
+      return EdgeInsets.all(10.h);
+    } else {
+      return EdgeInsets.all(4.w);
+    }
+  }
+
+  static double calculatePokeImageAndBallSize(){
+    return ScreenUtil().orientation == Orientation.portrait ? 0.2.sw : 0.25.sh;
+  }
 }

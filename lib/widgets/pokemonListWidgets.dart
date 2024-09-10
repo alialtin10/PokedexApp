@@ -31,6 +31,7 @@ class _MyWidgetState extends State<PokemonList> {
             List<PokedexModel> _listem = snapshot.data!;
 
             return GridView.builder(
+              itemCount: _listem.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount:
                         ScreenUtil().orientation == Orientation.portrait

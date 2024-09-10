@@ -1,4 +1,4 @@
 {
     "ros.distro": "melodic",
-    "cmake.sourceDirectory": "C:/Users/alial/OneDrive/Masaüstü/PokedexApp/windows/runner"
+    "cmake.sourceDirectory": "/home/agv/pokedexapp/linux"
 }
