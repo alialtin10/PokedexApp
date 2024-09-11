@@ -132,4 +132,10 @@ class Evolution {
         "num": num,
         "name": name,
       };
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "$name";
+  }
 }
